@@ -6,13 +6,8 @@ export const SocialMediaLink = () => {
   return (
     <>
       {SocialMediaLinkData.map((data) => (
-        <div className={s.socialmedia__wrapper}>
-          <Link
-            className={s.socialmedia__link}
-            to={data.link}
-            key={data.id}
-            target="_blank"
-          >
+        <div className={s.socialmedia__wrapper} key={data.id}>
+          <Link className={s.socialmedia__link} to={data.link} target="_blank">
             <div className={s.socialmedia__inner}>
               <div className={s.socialmedia__img_wrapper}>
                 <img

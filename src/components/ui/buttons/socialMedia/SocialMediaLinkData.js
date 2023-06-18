@@ -1,4 +1,4 @@
-import folder from '../../../pictures/Folder.svg';
+import folder from '../../../../pictures/Folder.svg';
 
 const SocialMediaLinkData = [
   {id: 1, img: `${folder}`, name: 'Telegram', link: 'https://web.telegram.org/a/'},

@@ -1,6 +1,7 @@
 import s from './StartPage.module.scss';
 import avatar from '../../../pictures/Avatar.svg';
-import { SocialMediaLink } from '../../ui/buttons/SocialMediaLink';
+import { SocialMediaLink } from '../../ui/buttons/socialMedia/SocialMediaLink';
+import { JumpButton } from '../../ui/buttons/jumpButton/JumpButton';
 
 export const StartPage = () => {
   return (
@@ -17,6 +18,7 @@ export const StartPage = () => {
             <div className={s.startpage__socialmedia}>
               <SocialMediaLink />
             </div>
+            <JumpButton option='Start' />
           </div>
         </div>
       </div>
