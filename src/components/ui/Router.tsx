@@ -9,9 +9,9 @@ export const Router = () => {
     <BrowserRouter>
       <Routes>
         <Route element={<StartPage />} path="/" />
-        <Route element={<Step1Page />} path="/step1" />
-        <Route element={<Step2Page />} path="/step2" />
-        <Route element={<Step3Page />} path="/step3" />
+        <Route element={<Step1Page />} path="/:id/step1" />
+        <Route element={<Step2Page />} path="/:id/step2" />
+        <Route element={<Step3Page />} path="/:id/step3" />
         <Route element={<h1>Page not found</h1>} path="*" />
       </Routes>
     </BrowserRouter>

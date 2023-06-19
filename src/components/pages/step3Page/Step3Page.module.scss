@@ -1,0 +1,26 @@
+.steppage__wrapper {
+  width: 100%;
+  max-width: 900px;
+  height: 704px;
+  border-radius: 24px;
+  background: #fff;
+  padding: 62px 98px 80px;
+}
+
+.steppage__inner {
+  position: relative;
+  display: flex;
+  flex-direction: column;
+  justify-content: flex-start;
+  align-items: flex-start;
+  width: 100%;
+  height: 100%;
+  border: 1px solid #000;
+}
+
+.steppage__footer {
+  position: absolute;
+  width: 100%;
+  left: 0;
+  bottom: 0;
+}

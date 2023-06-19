@@ -1,7 +1,7 @@
 import { FC } from 'react';
 import s from './JumpButton.module.scss';
 import { JumpButtonData } from './JumpButtonData';
-import { useNavigate } from 'react-router-dom';
+import { useNavigate, useParams } from 'react-router-dom';
 
 interface IJumpButton {
   option: 'Start' | 'Next' | 'Back';
@@ -9,9 +9,14 @@ interface IJumpButton {
 
 export const JumpButton: FC<IJumpButton> = ({option}) => {
   const navigate = useNavigate();
-
+  const {id} = useParams();
   
-  const jump = () => option === 'Start' || option === 'Next' ? navigate(1) : navigate(-1);
+  const jump = () =>
+    option === "Start"
+      ? navigate("/1/step1")
+      : option === "Next"
+      ? navigate(`/${id && +id + 1}/step${id && +id + 1}`)
+      : navigate(-1);
 
 
   return (

@@ -1,8 +1,9 @@
 .jumpbutton__wrapper, .jumpbutton__wrapper_back {
   padding: 12px 16px;
   border: 1px solid #5558FA;
-  border-radius: 8px;
+  border-radius: 2px;
   background: #5558FA;
+  transition: .4s;
   cursor: pointer;
   &:hover {
     background: #0105f8;
