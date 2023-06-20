@@ -1,6 +1,7 @@
 import { Input } from '../input/Input';
 import s from './Form.module.scss'
 import { useForm } from "react-hook-form";
+import { selectOptions } from './FormData';
 
 export const Form = () => {
 
@@ -66,6 +67,115 @@ export const Form = () => {
           {errors.Email && (
             <span className={s.input__error}>
               {errors.Email.message}
+            </span>
+          )}
+        </div>
+      </label>
+      <label className={s.input__wrapper}>
+        <div className={s.input__text_wrapper}>
+          <p className={s.input__text}>Nickname</p>
+        </div>
+        <input
+          className={s.input}
+          type="text"
+          placeholder="Placeholder"
+          {...register("Nickname", {
+            required: "Поле обязательно к заполнению",
+            pattern: {
+              value: /^[A-zА-яЁё\d]+$/,
+              message: "Можно вводить только буквы и цифры",
+            },
+            maxLength: {
+              value: 30,
+              message: 'Максимальная длина 30 символов'
+            }
+          })}
+        />
+        <div className={s.input__error_wrapper}>
+          {errors.Nickname && (
+            <span className={s.input__error}>
+              {errors.Nickname.message}
+            </span>
+          )}
+        </div>
+      </label>
+      <label className={s.input__wrapper}>
+        <div className={s.input__text_wrapper}>
+          <p className={s.input__text}>Name</p>
+        </div>
+        <input
+          className={s.input}
+          type="text"
+          placeholder="Placeholder"
+          {...register("Name", {
+            required: "Поле обязательно к заполнению",
+            pattern: {
+              value: /^[A-zА-яЁё]+$/,
+              message: "Можно вводить только буквы",
+            },
+            maxLength: {
+              value: 50,
+              message: 'Максимальная длина 50 символов'
+            }
+          })}
+        />
+        <div className={s.input__error_wrapper}>
+          {errors.Name && (
+            <span className={s.input__error}>
+              {errors.Name.message}
+            </span>
+          )}
+        </div>
+      </label>
+      <label className={s.input__wrapper}>
+        <div className={s.input__text_wrapper}>
+          <p className={s.input__text}>Sername</p>
+        </div>
+        <input
+          className={s.input}
+          type="text"
+          placeholder="Placeholder"
+          {...register("Sername", {
+            required: "Поле обязательно к заполнению",
+            pattern: {
+              value: /^[A-zА-яЁё]+$/,
+              message: "Можно вводить только буквы",
+            },
+            maxLength: {
+              value: 50,
+              message: 'Максимальная длина 50 символов'
+            }
+          })}
+        />
+        <div className={s.input__error_wrapper}>
+          {errors.Sername && (
+            <span className={s.input__error}>
+              {errors.Sername.message}
+            </span>
+          )}
+        </div>
+      </label>
+      <label className={s.input__wrapper}>
+        <div className={s.input__text_wrapper}>
+          <p className={s.input__text}>Sex</p>
+        </div>
+        <select
+          className={s.input}
+          type="text"
+          placeholder="Placeholder"
+          {...register("Sex", {
+            required: "Необходимо выбрать пол",
+          })}
+          >
+            { selectOptions.map(option => 
+              <option value={option.value} key={option.id} >{option.text}</option>
+              )
+            }
+          </select>
+        <div className={s.input__error_wrapper}>
+          {errors.Sex && (
+            <span className={s.input__error}>
+              {errors.Sex.message}
             </span>
           )}
         </div>
