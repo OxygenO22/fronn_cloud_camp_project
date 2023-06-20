@@ -11,11 +11,11 @@ interface IHeader {
 export const Header: FC<IHeader> = ({ option }) => {
   return (
     <>
-      {option === "StartPage" ? (
+      {option === 'StartPage' ? (
         <header className={s.header__wrapper}>
           <div className={s.header__inner}>
             <div className={s.header__avatar}>
-              <img className={s.header__avatar_img} src={avatar} alt="avatar" />
+              <img className={s.header__avatar_img} src={avatar} alt='avatar' />
             </div>
             <div className={s.header__personal_info}>
               <div className={s.header__name_wrapper}>
